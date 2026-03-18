@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+<div class="page-header">
+  <div class="page-eyebrow">Portfolio</div>
+  <h1 class="page-title">Selected <em>Work</em></h1>
+  <p class="page-subtitle">Projects built with care, deployed with confidence.</p>
+</div>
+
+<section class="section" style="background:var(--cream)">
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <% categories.forEach(cat => { %>
+    <button class="filter-btn <%= activeCategory===cat?'active':'' %>" data-cat="<%= cat %>">
+      <%= cat.charAt(0).toUpperCase() + cat.slice(1) %>
+    </button>
+    <% }) %>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="grid-3">
+    <% projects.forEach((p, i) => { %>
+    <a href="/work/<%= p.id %>" class="project-card reveal" style="transition-delay:<%= (i%3)*0.1 %>s">
+      <div class="project-thumb" style="background:<%= p.gradient %>">
+        <div class="project-thumb-num">0<%= i+1 %></div>
+        <div class="project-thumb-icon"><%= p.icon %></div>
+        <div class="project-overlay">
+          <span class="project-overlay-btn">View Case Study</span>
+        </div>
+      </div>
+      <div class="project-body">
+        <div class="project-tags">
+          <% p.tags.forEach(tag => { %><span class="ptag"><%= tag %></span><% }) %>
+        </div>
+        <h3><%= p.title %></h3>
+        <p><%= p.desc.substring(0,110) %>…</p>
+        <div class="project-year"><%= p.category %> · <%= p.year %></div>
+      </div>
+    </a>
+    <% }) %>
+  </div>
+
+  <% if(projects.length === 0) { %>
+  <div style="text-align:center;padding:4rem;color:var(--muted)">
+    <div style="font-size:3rem;margin-bottom:1rem">🔍</div>
+    <p>No projects found in this category.</p>
+    <a href="/work" class="btn-outline" style="margin-top:1.5rem;display:inline-block">Show All</a>
+  </div>
+  <% } %>
+
+</section>
+
+<!-- CTA -->
+<section class="section section-dark" style="text-align:center">
+  <div class="section-label" style="justify-content:center">Let's Collaborate</div>
+  <h2 class="section-title" style="text-align:center">Have a project <em>in mind?</em></h2>
+  <p style="font-family:var(--serif2);font-size:1.05rem;font-style:italic;color:rgba(253,246,236,.55);max-width:44ch;margin:0 auto 2rem">I'm always open to interesting problems and meaningful work. Let's talk.</p>
+  <a href="/contact" class="btn-gold">Start a Conversation ↗</a>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,79 @@
+<%- include('partials/header') %>
+
+<!-- Hero Banner -->
+<div class="project-detail-hero" style="background:<%= project.gradient %>">
+  <div style="position:relative;z-index:1">
+    <div style="font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.75rem">
+      <a href="/work" style="color:rgba(255,255,255,.5);text-decoration:none">Work</a> / <%= project.category %>
+    </div>
+    <h1 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,3rem);font-weight:900;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35);letter-spacing:-.02em"><%= project.title %></h1>
+  </div>
+</div>
+
+<section class="section" style="background:var(--cream)">
+  <div style="display:grid;grid-template-columns:1.3fr 0.7fr;gap:4rem;align-items:start">
+
+    <!-- Left: content -->
+    <div class="reveal-left">
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem">
+        <% project.tags.forEach(tag => { %><span class="ptag"><%= tag %></span><% }) %>
+      </div>
+
+      <h2 style="font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--charcoal);margin-bottom:.75rem">Overview</h2>
+      <p style="font-family:var(--serif2);font-size:1.05rem;line-height:1.85;color:var(--mid);margin-bottom:2rem"><%= project.desc %></p>
+
+      <div style="border-left:3px solid var(--gold);padding:1.2rem 1.5rem;background:var(--warm-white);margin-bottom:2rem">
+        <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--charcoal);margin-bottom:.5rem">🎯 The Challenge</h3>
+        <p style="font-size:.9rem;line-height:1.75;color:var(--mid)"><%= project.challenge %></p>
+      </div>
+
+      <div style="border-left:3px solid var(--accent-teal);padding:1.2rem 1.5rem;background:var(--warm-white);margin-bottom:2rem">
+        <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--charcoal);margin-bottom:.5rem">💡 The Solution</h3>
+        <p style="font-size:.9rem;line-height:1.75;color:var(--mid)"><%= project.solution %></p>
+      </div>
+
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+        <a href="<%= project.url %>" class="btn-primary"><span>Live Demo ↗</span></a>
+        <a href="<%= project.github %>" class="btn-outline">GitHub →</a>
+        <a href="/work" class="btn-outline" style="color:var(--muted);border-color:rgba(201,146,42,.3)">← Back to Work</a>
+      </div>
+    </div>
+
+    <!-- Right: metrics + meta -->
+    <div class="reveal-right">
+      <h3 style="font-family:var(--serif);font-size:.85rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem">
+        Key Results <span style="flex:1;height:1px;background:rgba(201,146,42,.2);display:inline-block"></span>
+      </h3>
+      <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:2rem">
+        <% project.metrics.forEach(m => { %>
+        <div class="metric-pill" style="text-align:left;display:flex;align-items:center;gap:.75rem">
+          <span style="color:var(--gold);font-size:1.2rem">◆</span>
+          <span class="num" style="font-size:1rem;font-weight:600;color:var(--charcoal)"><%= m %></span>
+        </div>
+        <% }) %>
+      </div>
+
+      <h3 style="font-family:var(--serif);font-size:.85rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:flex;align-items:center;gap:.75rem">
+        Project Info <span style="flex:1;height:1px;background:rgba(201,146,42,.2);display:inline-block"></span>
+      </h3>
+      <div style="background:var(--warm-white);border:1px solid rgba(201,146,42,.15);padding:1.4rem">
+        <% const meta = [['Category', project.category],['Year', project.year],['Stack', project.tags.join(', ')]] %>
+        <% meta.forEach(([k,v]) => { %>
+        <div style="display:flex;justify-content:space-between;font-size:.85rem;border-bottom:1px solid rgba(201,146,42,.1);padding:.65rem 0">
+          <span style="color:var(--muted)"><%= k %></span>
+          <span style="color:var(--charcoal);font-weight:500;text-align:right;max-width:60%"><%= v %></span>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- More Projects -->
+<section class="section section-dark">
+  <div class="section-label">Keep Exploring</div>
+  <h2 class="section-title">More <em>Work</em></h2>
+  <a href="/work" class="btn-gold">View All Projects ↗</a>
+</section>
+
+<%- include('partials/footer') %>

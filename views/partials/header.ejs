@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title><%= title %></title>
+<meta name="description" content="Aviral Chaudhary — Full Stack Web Developer based in Dehradun, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav>
+  <a class="nav-logo" href="/">A<span>.</span>Chaudhary</a>
+  <ul class="nav-links">
+    <li><a href="/" class="<%= page==='home'?'active':'' %>">Home</a></li>
+    <li><a href="/skills" class="<%= page==='skills'?'active':'' %>">Skills</a></li>
+    <li><a href="/education" class="<%= page==='education'?'active':'' %>">Education</a></li>
+    <li><a href="/work" class="<%= page==='work'?'active':'' %>">Work</a></li>
+    <li><a href="/contact" class="<%= page==='contact'?'active':'' %>">Contact</a></li>
+  </ul>
+</nav>

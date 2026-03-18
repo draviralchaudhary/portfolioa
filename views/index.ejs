@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+
+<!-- Hero -->
+<section style="min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:8rem 4rem 4rem;position:relative;overflow:hidden;background:var(--cream)">
+  <div style="position:absolute;right:-8rem;top:-8rem;width:54rem;height:54rem;background:radial-gradient(circle,rgba(232,185,106,.15) 0%,transparent 70%);border-radius:50%;pointer-events:none;animation:breathe 6s ease-in-out infinite"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,146,42,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,146,42,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none"></div>
+
+  <div style="position:relative;z-index:2">
+    <div style="display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;animation:fadeUp .8s .2s ease both">
+      <span style="width:28px;height:1px;background:var(--gold);display:inline-block"></span>
+      <%= owner.available ? 'Available for work' : 'Currently busy' %>
+    </div>
+
+    <!-- ✅ NAME FIXED HERE -->
+    <h1 style="font-family:var(--serif);font-size:clamp(3rem,5.5vw,5.2rem);font-weight:900;line-height:1.02;letter-spacing:-.02em;color:var(--charcoal);animation:fadeUp .9s .35s ease both">
+      Aviral<br>
+      <em style="font-style:italic;color:var(--gold)">Chaudhary.</em>
+    </h1>
+
+    <p style="font-family:var(--serif2);font-size:1.2rem;font-style:italic;color:var(--muted);margin:.6rem 0 1.6rem;animation:fadeUp .9s .5s ease both"><%= owner.title %> &amp; <%= owner.tagline %></p>
+    <p style="font-size:1rem;line-height:1.8;color:var(--mid);max-width:38ch;margin-bottom:2.2rem;animation:fadeUp .9s .65s ease both"><%= owner.bio %></p>
+
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .9s .8s ease both">
+      <a href="/work" class="btn-primary"><span>View My Work</span></a>
+      <a href="/contact" class="btn-outline">Get In Touch</a>
+    </div>
+
+    <div class="stat-row" style="animation:fadeUp .9s .95s ease both">
+      <div class="stat-box"><span class="num"><%= owner.yearsExp %>+</span><span class="lbl">Years Exp.</span></div>
+      <div class="stat-box"><span class="num"><%= owner.projectsCount %>+</span><span class="lbl">Projects</span></div>
+      <div class="stat-box"><span class="num"><%= owner.satisfaction %>%</span><span class="lbl">Satisfaction</span></div>
+    </div>
+  </div>
+
+  <!-- Photo (unchanged) -->
+  <div style="display:flex;justify-content:center;align-items:center;position:relative;z-index:2;animation:fadeIn 1.2s .4s ease both">
+    <div style="position:relative;width:360px;height:440px">
+      <div style="position:absolute;top:18px;left:18px;right:-18px;bottom:-18px;border:2px solid var(--gold-light)"></div>
+      <div style="position:relative;z-index:1;width:100%;height:100%;background:linear-gradient(160deg,#C8A882 0%,#8B6040 50%,#4A2E18 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden">
+
+  <!-- ✅ ADD profile-card INSIDE -->
+      <div class="profile-card" style="width:100%;height:100%;">
+       <img src="/images/profile.jpg" class="profile-img" />
+      </div>
+
+    </div>
+      <div style="position:absolute;bottom:-1.4rem;left:2rem;background:var(--gold);color:var(--charcoal);font-family:var(--serif);font-size:.9rem;font-weight:700;padding:.5rem 1.3rem;z-index:3">// Developer</div>
+    </div>
+  </div>
+</section>
+
+<!-- Rest unchanged -->
+<%- include('partials/footer') %>

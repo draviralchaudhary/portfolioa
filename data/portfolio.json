@@ -1,0 +1,182 @@
+{
+  "owner": {
+    "name": "Aviral Chaudhary",
+    "title": "Full Stack Developer",
+    "tagline": "AI Engineer & Problem Solver",
+    "bio": "I build AI-powered applications, SaaS platforms, and scalable systems.",
+    "yearsExp": 2,
+    "projectsCount": 15,
+    "satisfaction": 98,
+    "available": true
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "icon": "⚛️",
+      "color": "#C9922A",
+      "items": [
+        { "name": "React / Next.js", "level": 95 },
+        { "name": "TypeScript", "level": 88 },
+        { "name": "CSS / Tailwind", "level": 92 },
+        { "name": "GSAP / Framer", "level": 80 },
+        { "name": "Vue.js", "level": 72 }
+      ]
+    },
+    {
+      "category": "Backend",
+      "icon": "🛠️",
+      "color": "#B84A2A",
+      "items": [
+        { "name": "Node.js / Express", "level": 90 },
+        { "name": "REST & GraphQL", "level": 85 },
+        { "name": "Python / Django", "level": 75 },
+        { "name": "Microservices", "level": 78 },
+        { "name": "WebSockets", "level": 82 }
+      ]
+    },
+    {
+      "category": "Database & Cloud",
+      "icon": "🗄️",
+      "color": "#2A7B6F",
+      "items": [
+        { "name": "PostgreSQL", "level": 87 },
+        { "name": "MongoDB", "level": 88 },
+        { "name": "Redis", "level": 76 },
+        { "name": "AWS / Azure", "level": 75 },
+        { "name": "Docker / K8s", "level": 80 }
+      ]
+    },
+    {
+      "category": "Tools & Practices",
+      "icon": "⚙️",
+      "color": "#6B4F35",
+      "items": [
+        { "name": "Git / GitHub", "level": 95 },
+        { "name": "CI/CD Pipelines", "level": 82 },
+        { "name": "Agile / Scrum", "level": 90 },
+        { "name": "Testing (Jest)", "level": 78 },
+        { "name": "Figma / Design", "level": 70 }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "type": "degree",
+      "year": "2021 – 2027",
+      "title": "Doctor Of Pharmacy (PharmD)",
+      "institution": "Shri Guru Ram Rai University (SGRRU), Dehradun",
+      "grade": "8.7 CGPA",
+      "desc": "Specialised in software engineering, data structures, and web technologies. Graduated with distinction. ."
+    },
+    {
+      "type": "degree",
+      "year": "2018 – 2019",
+      "title": "Intermediate — PCB ",
+      "institution": "Sai Public School Kashipur, Uttarakhand",
+      "grade": "76%",
+      "desc": "Completed with distinction. Developed foundational programming skills in C++ and discovered a passion for building digital products."
+    },
+    {
+      "type": "degree",
+      "year": "2016 – 2017",
+      "title": "High School",
+      "institution": "St. Mary's School, Kashipur, Uttarakhand",
+      "grade": "72%",
+      "desc": "Built early interest in mathematics and logical reasoning."
+    }
+  ],
+ 
+  "projects": [
+    {
+      "id": "medtrack",
+      "title": "MedTrack — Healthcare Portal",
+      "category": "Healthcare",
+      "tags": ["React", "Node.js", "MongoDB", "AWS"],
+      "gradient": "linear-gradient(135deg,#1a3a4a,#2A7B6F)",
+      "icon": "🏥",
+      "desc": "Full-stack appointment and records management platform serving 12,000+ patients with real-time availability and HIPAA-compliant secure data handling.",
+      "challenge": "Building a reliable real-time slot booking engine that could handle concurrent appointment requests without double-booking.",
+      "solution": "Implemented optimistic locking with Redis-backed sessions and WebSocket notifications for instant confirmation.",
+      "metrics": ["12,000+ patients", "99.9% uptime", "40% faster bookings"],
+      "url": "#",
+      "github": "#",
+      "year": "2024"
+    },
+    {
+      "id": "luxecart",
+      "title": "LuxeCart — E-Commerce Platform",
+      "category": "E-Commerce",
+      "tags": ["Next.js", "Stripe", "PostgreSQL", "Redis"],
+      "gradient": "linear-gradient(135deg,#3D2B1A,#C9922A)",
+      "icon": "🛒",
+      "desc": "High-conversion online store with AI-driven product recommendations, Stripe integration, and real-time inventory sync across 3 warehouses.",
+      "challenge": "Reducing cart abandonment and improving checkout conversion across mobile devices.",
+      "solution": "One-click checkout flow, smart recommendation engine using purchase history, and progressive web app capabilities.",
+      "metrics": ["₹2Cr+ GMV", "68% mobile traffic", "3.2% conversion rate"],
+      "url": "#",
+      "github": "#",
+      "year": "2023"
+    },
+    {
+      "id": "datapulse",
+      "title": "DataPulse — Analytics Dashboard",
+      "category": "Business Intelligence",
+      "tags": ["React", "D3.js", "Python", "AWS"],
+      "gradient": "linear-gradient(135deg,#4A1520,#B84A2A)",
+      "icon": "📈",
+      "desc": "Interactive BI tool with live data pipelines, custom D3 charts, role-based access control, and automated reporting for enterprise teams.",
+      "challenge": "Rendering 100k+ data points interactively without degrading browser performance.",
+      "solution": "Canvas-based rendering with WebWorker data processing and virtual scrolling for large datasets.",
+      "metrics": ["500+ daily users", "100k data points", "Sub-2s load time"],
+      "url": "#",
+      "github": "#",
+      "year": "2023"
+    },
+    {
+      "id": "connecthub",
+      "title": "ConnectHub — Real-Time Messaging",
+      "category": "Communication",
+      "tags": ["Socket.io", "Redis", "Node.js", "React"],
+      "gradient": "linear-gradient(135deg,#1C2A1C,#3D6B35)",
+      "icon": "💬",
+      "desc": "Scalable chat application supporting 10,000+ concurrent users with end-to-end encryption, file sharing, and WebRTC video calls.",
+      "challenge": "Maintaining message ordering and delivery guarantees at scale across distributed server instances.",
+      "solution": "Redis pub/sub for cross-instance messaging with a Kafka-backed event log for guaranteed delivery and replay.",
+      "metrics": ["10k concurrent users", "E2E encrypted", "<50ms latency"],
+      "url": "#",
+      "github": "#",
+      "year": "2022"
+    },
+    {
+      "id": "eduflow",
+      "title": "EduFlow — LMS Platform",
+      "category": "EdTech",
+      "tags": ["React", "Django", "ML", "PostgreSQL"],
+      "gradient": "linear-gradient(135deg,#1a1a3a,#534AB7)",
+      "icon": "🎓",
+      "desc": "Adaptive learning management system with AI-powered personalised learning paths. Deployed across 3 institutions in Uttar Pradesh.",
+      "challenge": "Creating personalisation that works for learners with wildly different backgrounds and learning speeds.",
+      "solution": "Collaborative filtering model trained on 50k student interactions, feeding a dynamic content sequencing engine.",
+      "metrics": ["3 institutions", "8,000+ students", "34% better outcomes"],
+      "url": "#",
+      "github": "#",
+      "year": "2022"
+    },
+    {
+      "id": "propfinder",
+      "title": "PropFinder — Real Estate App",
+      "category": "PropTech",
+      "tags": ["Next.js", "Maps API", "Prisma", "AWS"],
+      "gradient": "linear-gradient(135deg,#2A1A1A,#8B3A1A)",
+      "icon": "🏠",
+      "desc": "Property discovery platform with geospatial search, 3D virtual tour integration, and ML-powered valuation models for buyers and agents.",
+      "challenge": "Geospatial queries on a 200k+ property dataset needed to return in under 500ms with polygon-based filtering.",
+      "solution": "PostGIS spatial indexing with server-side clustering and aggressive CDN caching of tile layers.",
+      "metrics": ["200k properties", "Sub-500ms search", "15k monthly users"],
+      "url": "#",
+      "github": "#",
+      "year": "2024"
+    }
+  ],
+  "messages": []
+}

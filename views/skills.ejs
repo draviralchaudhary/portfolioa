@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+
+<div class="page-header">
+  <div class="page-eyebrow">What I Do</div>
+  <h1 class="page-title">Skills &amp; <em>Expertise</em></h1>
+  <p class="page-subtitle">Technologies I work with daily — from pixel to production.</p>
+</div>
+
+<!-- Skills Grid -->
+<section class="section" style="background:var(--cream)">
+  <div class="grid-2" style="gap:2rem">
+    <% skills.forEach((cat, i) => { %>
+    <div class="skill-card reveal" style="animation-delay:<%= i*0.1 %>s">
+      <div class="skill-card-icon"><%= cat.icon %></div>
+      <h3><%= cat.category %></h3>
+      <div class="bar-list">
+        <% cat.items.forEach(item => { %>
+        <div class="bar-item">
+          <label><%= item.name %> <span><%= item.level %>%</span></label>
+          <div class="bar-track"><div class="bar-fill" data-w="<%= item.level %>"></div></div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<!-- Tools I Use -->
+<section class="section" style="background:var(--warm-white)">
+  <div class="section-label">Day to Day</div>
+  <h2 class="section-title">Tools &amp; <em>Environment</em></h2>
+  <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem">
+    <% const tools = ['VS Code','Git & GitHub','Figma','Postman','Docker Desktop','TablePlus','Notion','Linear','Vercel','Netlify','AWS Console','Chrome DevTools','iTerm2','Insomnia','Jira'] %>
+    <% tools.forEach(t => { %>
+    <span style="font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);border:1px solid rgba(201,146,42,.25);padding:.45rem 1.1rem;background:var(--cream);transition:all .25s;cursor:default"
+      onmouseenter="this.style.background='var(--gold)';this.style.color='var(--charcoal)';this.style.borderColor='var(--gold)'"
+      onmouseleave="this.style.background='var(--cream)';this.style.color='var(--mid)';this.style.borderColor='rgba(201,146,42,.25)'"
+    ><%= t %></span>
+    <% }) %>
+  </div>
+</section>
+
+<!-- Approach -->
+<section class="section section-dark">
+  <div class="section-label">My Philosophy</div>
+  <h2 class="section-title">How I <em>Work</em></h2>
+  <div class="grid-3" style="margin-top:0">
+    <% const principles = [
+      {icon:'🏗️', title:'Architecture First', desc:'I design the system before I write the code. Clean separation of concerns prevents technical debt from day one.'},
+      {icon:'🎯', title:'Purpose-Driven', desc:'Every feature must earn its place. I push back on scope creep and keep codebases lean and maintainable.'},
+      {icon:'⚡', title:'Performance by Default', desc:'I profile before I optimise, and I don\'t ship until Lighthouse scores are where they need to be.'},
+      {icon:'♿', title:'Accessibility Always', desc:'WCAG compliance and semantic HTML are non-negotiable. The web should work for everyone.'},
+      {icon:'🔒', title:'Security Minded', desc:'Input validation, parameterised queries, least-privilege access — security is baked in, not bolted on.'},
+      {icon:'📖', title:'Documented & Tested', desc:'Code I write in a hurry today, I can still read in two years. Tests give me the confidence to refactor.'}
+    ] %>
+    <% principles.forEach((p,i) => { %>
+    <div class="reveal" style="border:1px solid rgba(201,146,42,.15);padding:1.8rem;transition:border-color .3s"
+      onmouseenter="this.style.borderColor='var(--gold)'"
+      onmouseleave="this.style.borderColor='rgba(201,146,42,.15)'">
+      <div style="font-size:1.8rem;margin-bottom:.8rem"><%= p.icon %></div>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--warm-white);margin-bottom:.5rem"><%= p.title %></h3>
+      <p style="font-size:.83rem;line-height:1.7;color:rgba(253,246,236,.5)"><%= p.desc %></p>
+    </div>
+    <% }) %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

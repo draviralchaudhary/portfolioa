@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+
+<div class="page-header">
+  <div class="page-eyebrow">Let's Talk</div>
+  <h1 class="page-title">Get In <em>Touch</em></h1>
+  <p class="page-subtitle">Every great project starts with a conversation.</p>
+</div>
+
+<section class="section" style="background:var(--cream)">
+  <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:5rem;align-items:start">
+
+    <!-- Left: info -->
+    <div class="reveal-left">
+      <p style="font-family:var(--serif2);font-size:1.1rem;font-style:italic;line-height:1.8;color:var(--brown);margin-bottom:2rem">
+        Whether you have a project to build, a problem to solve, or just want to connect — I'd love to hear from you.
+      </p>
+
+      <div style="display:flex;flex-direction:column">
+        <a href="mailto:<%= owner.email %>" class="contact-link-item">
+          <div class="contact-link-icon">✉️</div>
+          <div>
+            <div style="font-weight:500;color:var(--charcoal);font-size:.9rem;margin-bottom:2px">Email</div>
+            <div style="font-size:.82rem"><%= owner.email %></div>
+          </div>
+        </a>
+        <a href="tel:<%= owner.phone %>" class="contact-link-item">
+          <div class="contact-link-icon">📞</div>
+          <div>
+            <div style="font-weight:500;color:var(--charcoal);font-size:.9rem;margin-bottom:2px">Phone</div>
+            <div style="font-size:.82rem"><%= owner.phone %></div>
+          </div>
+        </a>
+        <a href="https://<%= owner.linkedin %>" class="contact-link-item" target="_blank">
+          <div class="contact-link-icon">💼</div>
+          <div>
+            <div style="font-weight:500;color:var(--charcoal);font-size:.9rem;margin-bottom:2px">LinkedIn</div>
+            <div style="font-size:.82rem"><%= owner.linkedin %></div>
+          </div>
+        </a>
+        <a href="https://<%= owner.github %>" class="contact-link-item" target="_blank">
+          <div class="contact-link-icon">💻</div>
+          <div>
+            <div style="font-weight:500;color:var(--charcoal);font-size:.9rem;margin-bottom:2px">GitHub</div>
+            <div style="font-size:.82rem"><%= owner.github %></div>
+          </div>
+        </a>
+      </div>
+
+      <div style="margin-top:2rem;padding:1.4rem;background:var(--warm-white);border:1px solid rgba(201,146,42,.15)">
+        <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:.6rem">
+          <span style="width:8px;height:8px;border-radius:50%;background:#3D6B35;display:inline-block;box-shadow:0 0 0 3px rgba(61,107,53,.2)"></span>
+          <span style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:#3D6B35;font-weight:500">Available for work</span>
+        </div>
+        <p style="font-size:.83rem;color:var(--muted);line-height:1.6">Open to freelance projects, full-time roles, and consulting engagements. Response within 24 hours.</p>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="reveal-right">
+      <div id="formAlert" style="display:none" class="alert"></div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project Enquiry / Collaboration">
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project, timeline, and budget…" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;padding:1rem;font-size:.82rem;border:none">
+          <span>Send Message ↗</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="section section-dark" style="text-align:center;padding:3rem 4rem">
+  <p style="font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">Based In</p>
+  <h2 style="font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--warm-white)"><%= owner.location %></h2>
+  <p style="color:rgba(253,246,236,.45);font-size:.85rem;margin-top:.5rem">Available for remote work worldwide</p>
+</section>
+
+<%- include('partials/footer') %>
