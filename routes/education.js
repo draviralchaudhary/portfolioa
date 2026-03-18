@@ -8,12 +8,12 @@ router.get('/', (req, res) => {
       title: 'Education — Aviral Chaudhary',
       page: 'education',
       owner: data.owner || {},
-      education: data.education || [],         // ✅ SAFE
-      certifications: data.certifications || [] // ✅ SAFE
+      education: Array.isArray(data.education) ? data.education : [],
+      certifications: Array.isArray(data.certifications) ? data.certifications : []
     });
   } catch (err) {
-    console.error(err);
-    res.status(500).send('Server Error');
+    console.error("EDUCATION ERROR:", err);
+    res.status(500).send('Internal Server Error');
   }
 });
 

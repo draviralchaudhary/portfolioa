@@ -85,7 +85,14 @@
       "desc": "Built early interest in mathematics and logical reasoning."
     }
   ],
-  "certifications": [],
+  "certifications": [
+    {
+      "icon": "🎓",
+      "title": "Web Dev",
+      "issuer": "Coursera",
+      "year": "2023"
+    }
+  ],
   "projects": [
     {
       "id": "medtrack",

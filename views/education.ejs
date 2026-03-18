@@ -39,7 +39,7 @@
       <div style="background:var(--warm-white);border:1px solid rgba(201,146,42,.15);padding:1.8rem">
         <p style="font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem">Quick Stats</p>
         <div style="display:flex;flex-direction:column;gap:.8rem">
-          <% const stats = [['Graduation','2027'],['Specialisation','Software Engineering'],['Final Year Project''],['Achievement','Department Honours']] %>
+          <% const stats = [['Graduation','2027'],['Specialisation','Software Engineering'],['Final Year Project','Real-Time Collab Platform'],['Achievement','Department Honours']] %>
           <% stats.forEach(([k,v]) => { %>
           <div style="display:flex;justify-content:space-between;font-size:.85rem;border-bottom:1px solid rgba(201,146,42,.1);padding-bottom:.65rem">
             <span style="color:var(--muted)"><%= k %></span>
@@ -53,6 +53,21 @@
 </section>
 
 <!-- Certifications -->
+<section class="section" style="background:var(--warm-white)">
+  <div class="section-label">Certifications</div>
+  <h2 class="section-title">My <em>Certifications</em></h2>
+  <div class="grid-3" style="margin-top:0">
+    <% (certifications || []).forEach((cert, i) => { %>
+    <div class="reveal" style="border:1px solid rgba(201,146,42,.18);padding:1.8rem;background:var(--cream);transition:transform .3s,box-shadow .3s"
+      onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(60,40,20,.1)'"
+      onmouseleave="this.style.transform='';this.style.boxShadow=''">
+      <div style="font-size:2rem;margin-bottom:.8rem"><%= cert.icon %></div>
+      <h3 style="font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--charcoal);margin-bottom:.5rem"><%= cert.title %></h3>
+      <p style="font-size:.83rem;line-height:1.7;color:var(--muted)"><%= cert.issuer %>, <%= cert.year %></p>
+    </div>
+    <% }) %>
+  </div>
+</section>
 
 <!-- Currently Learning -->
 <section class="section" style="background:var(--warm-white)">
