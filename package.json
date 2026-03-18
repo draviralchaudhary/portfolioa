@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "aviral-chaudhary-portfolio",
-=======
-  "name": "rahul-verma-portfolio",
->>>>>>> 64d7a1c3e23c5049be391ca61bf90b81a03e2743
   "version": "1.0.0",
   "description": "Full Stack Developer Portfolio",
   "main": "server.js",
@@ -21,10 +17,6 @@
   "devDependencies": {
     "nodemon": "^3.1.14"
   },
-<<<<<<< HEAD
   "author": "Aviral Chaudhary",
-=======
-  "author": "Rahul Verma",
->>>>>>> 64d7a1c3e23c5049be391ca61bf90b81a03e2743
   "license": "MIT"
 }
