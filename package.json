@@ -1,5 +1,5 @@
 {
-  "name": "rahul-verma-portfolio",
+  "name": "aviral-chaudhary-portfolio",
   "version": "1.0.0",
   "description": "Full Stack Developer Portfolio",
   "main": "server.js",
@@ -17,6 +17,6 @@
   "devDependencies": {
     "nodemon": "^3.1.14"
   },
-  "author": "Rahul Verma",
+  "author": "Aviral Chaudhary",
   "license": "MIT"
 }
