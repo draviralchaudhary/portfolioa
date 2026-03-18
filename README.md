@@ -1,23 +1,18 @@
-# Rahul Verma — Portfolio Website
+# Aviral Chaudhary — Portfolio Website
 
-A full-stack multi-page portfolio built with **Node.js**, **Express**, and **EJS** templating.
+A full-stack portfolio built with Node.js, Express, and EJS.
 
-## 🚀 Quick Start
+## 🚀 Features
+- Dynamic portfolio
+- Projects showcase
+- Contact form
+- Responsive design
 
-```bash
-# 1. Install dependencies
-npm install
-
-# 2. Run in development (auto-reload)
-npm run dev
-
-# 3. Or run in production
-npm start
-```
-
-Open **http://localhost:3000** in your browser.
-
----
+## 🛠 Tech Stack
+- Node.js
+- Express.js
+- EJS
+- HTML/CSS/JS
 
 ## 📁 Project Structure
 

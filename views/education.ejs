@@ -53,21 +53,6 @@
 </section>
 
 <!-- Certifications -->
-<section class="section section-dark">
-  <div class="section-label">Certified</div>
-  <h2 class="section-title">Professional <em>Certifications</em></h2>
-  <div class="grid-3" style="margin-top:0">
-    <% certifications.forEach((cert, i) => { %>
-    <div class="cert-card reveal" style="transition-delay:<%= i*0.1 %>s">
-      <div class="cert-icon-box"><%= cert.icon %></div>
-      <div class="cert-info">
-        <h4><%= cert.title %></h4>
-        <p><%= cert.issuer %> · <%= cert.year %></p>
-      </div>
-    </div>
-    <% }) %>
-  </div>
-</section>
 
 <!-- Currently Learning -->
 <section class="section" style="background:var(--warm-white)">

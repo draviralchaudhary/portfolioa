@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title><%= title %></title>
+<title><%= typeof title !== 'undefined' ? title : 'Aviral Chaudhary Portfolio' %></title>
 <meta name="description" content="Aviral Chaudhary — Full Stack Web Developer based in Dehradun, India.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 <div class="cursor-ring" id="cursorRing"></div>
 
 <nav>
-  <a class="nav-logo" href="/">A<span>.</span>Chaudhary</a>
+  <a class="nav-logo" href="/">Dr<span>.</span>Chaudhary</a>
   <ul class="nav-links">
     <li><a href="/" class="<%= page==='home'?'active':'' %>">Home</a></li>
     <li><a href="/skills" class="<%= page==='skills'?'active':'' %>">Skills</a></li>
