@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Aviral Chaudhary — Portfolio Website
 
 A full-stack portfolio built with Node.js, Express, and EJS.
@@ -13,6 +14,28 @@ A full-stack portfolio built with Node.js, Express, and EJS.
 - Express.js
 - EJS
 - HTML/CSS/JS
+=======
+# Rahul Verma — Portfolio Website
+
+A full-stack multi-page portfolio built with **Node.js**, **Express**, and **EJS** templating.
+
+## 🚀 Quick Start
+
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run in development (auto-reload)
+npm run dev
+
+# 3. Or run in production
+npm start
+```
+
+Open **http://localhost:3000** in your browser.
+
+---
+>>>>>>> 64d7a1c3e23c5049be391ca61bf90b81a03e2743
 
 ## 📁 Project Structure
 
