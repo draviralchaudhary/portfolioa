@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Aviral Chaudhary — Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title !== 'undefined' ? title : 'Aviral Chaudhary Portfolio' %></title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -135,7 +135,7 @@ footer{background:var(--charcoal);padding:2rem 4rem;display:flex;align-items:cen
 <div class="cursor-ring" id="curRing"></div>
 
 <nav id="nav">
-  <div class="nav-logo" onclick="nav('home')">A<span>.</span>Chaudhary</div>
+  <div class="nav-logo" onclick="nav('home')">Dr<span>.</span>Chaudhary</div>
   <ul class="nav-links">
     <li><a onclick="nav('home')" data-page="home">Home</a></li>
     <li><a onclick="nav('skills')" data-page="skills">Skills</a></li>
@@ -152,10 +152,10 @@ footer{background:var(--charcoal);padding:2rem 4rem;display:flex;align-items:cen
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(201,146,42,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,146,42,.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none"></div>
   <div style="position:relative;z-index:2">
     <div style="display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;animation:fadeUp .8s .2s ease both">
-      <span style="width:28px;height:1px;background:var(--gold);display:inline-block"></span>Available for work
+      <span style="width:28px;height:1px;background:var(--gold);display:inline-block"></span>Open to work
     </div>
     <h1 style="font-family:var(--serif);font-size:clamp(3rem,5.5vw,5.2rem);font-weight:900;line-height:1.02;letter-spacing:-.02em;color:var(--charcoal);animation:fadeUp .9s .35s ease both">
-      Aviral<br><em style="font-style:italic;color:var(--gold)">Chaudhary.</em>
+      Dr.Aviral<br><em style="font-style:italic;color:var(--gold)">Chaudhary.</em>
     </h1>
     <p style="font-family:var(--serif2);font-size:1.2rem;font-style:italic;color:var(--muted);margin:.6rem 0 1.6rem;animation:fadeUp .9s .5s ease both">Full Stack Web Developer &amp; Agentic Ai devloper.</p>
     <p style="font-size:1rem;line-height:1.8;color:var(--mid);max-width:38ch;margin-bottom:2.2rem;animation:fadeUp .9s .65s ease both">I build elegant, high-performance web experiences that blend technical precision with creative vision. Every pixel intentional. Every interaction meaningful.</p>

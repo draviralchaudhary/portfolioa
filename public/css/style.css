@@ -81,7 +81,29 @@ footer{background:var(--charcoal);padding:2rem 4rem;display:flex;align-items:cen
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+@media (max-width: 900px) {
+  section[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    padding: 6rem 1.5rem !important;
+  }
 
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .page-header {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+}
 /* ── Skill bars ── */
 .skill-card{background:var(--warm-white);border:1px solid rgba(201,146,42,.15);padding:2rem;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}
 .skill-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--accent-red));transform:scaleX(0);transform-origin:left;transition:transform .4s}
@@ -184,16 +206,16 @@ footer{background:var(--charcoal);padding:2rem 4rem;display:flex;align-items:cen
 /*style*/
 .profile-card {
   position: relative;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .profile-img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
